@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "buildrush",
+  "version": "${version}",
+  "name": "BuildRush",
+  "description": "Drag-to-build: hold right click and drag to place a line of blocks with a ghost preview.",
+  "authors": ["WCG"],
+  "contact": {
+    "homepage": "https://github.com/lapizwcg/buildrush",
+    "sources": "https://github.com/lapizwcg/buildrush",
+    "issues": "https://github.com/lapizwcg/buildrush/issues"
+  },
+  "license": "ARR",
+  "icon": "assets/buildrush/icon.png",
+  "environment": "*",
+  "mixins": ["buildrush.mixins.json"],
+  "entrypoints": {
+    "main": ["dev.wcg.buildrush.BuildRushMod"],
+    "client": ["dev.wcg.buildrush.client.BuildRushClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.0",
+    "fabric-api": "*",
+    "minecraft": "~26.2"
+  }
+}

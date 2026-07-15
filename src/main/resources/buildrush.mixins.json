@@ -1,0 +1,9 @@
+{
+  "required": true,
+  "package": "dev.wcg.buildrush.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": ["MinecraftAccessor"],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
