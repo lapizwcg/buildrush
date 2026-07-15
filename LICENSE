@@ -1,0 +1,58 @@
+BuildRush — License
+Copyright (c) 2026 WCG (lapizwcg). All rights reserved.
+
+This is not an open source license. The source code is published so you can
+read it, learn from it, audit it and contribute to it — not so it can be
+re-released elsewhere.
+
+The short version: use it however you like, just don't re-release it.
+
+
+YOU MAY
+
+1. Use the mod for any purpose, private or public, including on public and
+   commercial servers, with no permission needed and no fee.
+
+2. Include the mod in a modpack, public or private, free or paid, provided
+   that the modpack credits "BuildRush by WCG" and links to
+   https://github.com/lapizwcg/buildrush
+
+3. Read, study and modify the source code for your own use, and distribute
+   modifications as patches or pull requests against the official repository.
+
+4. Make and keep copies for backup and personal use.
+
+
+YOU MAY NOT
+
+1. Re-release the mod. This means: uploading it, in whole or in part, in
+   original or modified form, to any site, store, launcher, repository or
+   distribution platform other than the official repository above.
+
+2. Publish a modified or renamed version of the mod as a separate project.
+
+3. Remove or alter authorship, license or attribution.
+
+4. Sell the mod itself, or put access to the mod behind a paywall.
+   (Charging for a server or a modpack that includes it is fine — see above.)
+
+
+NOTES
+
+- Point 2 under YOU MAY is a deliberate exception to "no re-release": modpacks
+  are how mods find their audience. Referencing the mod so the launcher
+  downloads it from the official page is always preferred over bundling the
+  jar, but bundling is permitted under the conditions above.
+
+- Contributions submitted as pull requests are licensed to the project owner
+  under these same terms.
+
+- Permission for anything not listed here can simply be asked for:
+  https://github.com/lapizwcg/buildrush/issues
+
+- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+  ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

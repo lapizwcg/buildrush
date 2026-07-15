@@ -61,4 +61,14 @@ The mod jar appears in `build/libs/`.
 
 ## License
 
-All rights reserved.
+**Use it however you like — just don't re-release it.** See [LICENSE](LICENSE).
+
+In short:
+
+- ✅ Use it anywhere, private or public servers, commercial or not.
+- ✅ Put it in a modpack — just credit "BuildRush by WCG" and link back here.
+- ✅ Read the code, modify it for yourself, send pull requests.
+- ❌ Do not upload it anywhere else, in any form, original or modified.
+- ❌ Do not publish a renamed or modified version as your own project.
+
+Anything else, just [ask](https://github.com/lapizwcg/buildrush/issues).

@@ -10,7 +10,7 @@
     "sources": "https://github.com/lapizwcg/buildrush",
     "issues": "https://github.com/lapizwcg/buildrush/issues"
   },
-  "license": "ARR",
+  "license": "Custom: free to use, no re-release (see LICENSE)",
   "icon": "assets/buildrush/icon.png",
   "environment": "*",
   "mixins": ["buildrush.mixins.json"],
