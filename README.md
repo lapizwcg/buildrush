@@ -6,7 +6,7 @@ A small, focused Fabric mod for Minecraft **26.2**. Place one block the normal w
 keep the button held, and drag your crosshair: a preview of ghost blocks follows your
 aim. Let go, and they all get placed at once.
 
-![icon](src/main/resources/assets/buildrush/icon.png)
+![BuildRush in action](preview.gif)
 
 ## How it works
 
