@@ -17,6 +17,8 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
+import net.minecraft.network.chat.Component;
+import org.lwjgl.glfw.GLFW;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,6 +38,14 @@ public class BuildRushClient implements ClientModInitializer {
     private static final List<BlockPos> ghosts = new ArrayList<>();
     private static int available;
 
+    // BuildRush mode state.
+    // false = vanilla right-click
+    // true = BuildRush right-click
+    private static boolean selectionMode = false;
+
+    // Tracks the previous V key state.
+    private static boolean vWasDown = false;
+
     @Override
     public void onInitializeClient() {
         // Первый клик — ванилла (запоминаем якорь); повторы при удержании — глушим.
@@ -43,6 +53,12 @@ public class BuildRushClient implements ClientModInitializer {
             if (!level.isClientSide() || player.isSpectator()) {
                 return InteractionResult.PASS;
             }
+
+            // Let vanilla handle right-click when disabled.
+            if (!selectionMode) {
+                return InteractionResult.PASS;
+            }
+
             ItemStack held = player.getMainHandItem();
             if (!(held.getItem() instanceof BlockItem)) {
                 return InteractionResult.PASS;
@@ -63,6 +79,37 @@ public class BuildRushClient implements ClientModInitializer {
             reset();
             return;
         }
+
+        // Toggle mode on a single V press.
+        boolean vDown = GLFW.glfwGetKey(
+          minecraft.getWindow().handle(),
+          GLFW.GLFW_KEY_V
+        ) == GLFW.GLFW_PRESS;
+
+        if (vDown && !vWasDown) {
+            selectionMode = !selectionMode;
+
+            if (selectionMode) {
+                minecraft.player.sendOverlayMessage(
+                    Component.literal("BuildRush selection mode enabled")
+                );
+            } else {
+                minecraft.player.sendOverlayMessage(
+                    Component.literal("BuildRush selection mode disabled")
+                );
+
+                // Clear the current selection.
+                reset();
+            }
+        }
+
+        vWasDown = vDown;
+
+        // Do nothing while BuildRush is disabled.
+        if (!selectionMode) {
+            return;
+        }
+
         boolean useDown = minecraft.options.keyUse.isDown();
 
         if (!useDown) {
